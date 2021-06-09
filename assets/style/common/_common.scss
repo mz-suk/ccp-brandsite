@@ -1,0 +1,114 @@
+// 변수 - 색상
+$pc1: #ea002c;
+$pc2: #fddb2b;
+$pc3: #3673ee;
+
+$fc1: #111;
+$fc6: #666;
+$fc9: #999;
+$fc5: #555;
+
+$fcD7: #d7d7d7;
+$fcE4: #e4e4e4;
+$fcF: #fff;
+$fcF0: #f0f0f0;
+$fcF9: #f9f9f9;
+$fc70: #707070;
+$fcEB: #ebebeb;
+
+// 믹스인 - 스크롤
+@mixin scroll($axis, $_max-height: null) {
+  @if $axis==x {
+    overflow-x: visible;
+    overflow-y: hidden;
+    white-space: nowrap;
+  } @else {
+    @if $_max-height !=null {
+      max-height: $_max-height;
+    }
+
+    overflow-x: hidden;
+    overflow-y: visible;
+    // overscroll-behavior:contain;
+  }
+
+  -webkit-overflow-scrolling: touch;
+  // scroll-behavior:smooth;
+}
+
+// 믹스인 - 텍스트 삭제
+@mixin blind() {
+  font: 0/0 a;
+}
+
+// 믹스인 - 말줄임
+@mixin clamp($clamp) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if $clamp==1 {
+    white-space: nowrap;
+  } @else {
+    -webkit-line-clamp: $clamp;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}
+
+// 믹스인 - 이미지 크롭
+@mixin cropimg($_ori: null) {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+
+    @if $_ori==w {
+      max-height: initial;
+      min-height: 100%;
+      width: 100%;
+      height: auto;
+    } @else {
+      min-width: 100%;
+      max-width: initial;
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+// 믹스인 - list-dot
+/*
+  $dotSt
+  1 > ·
+  2 > -
+*/
+@mixin listdot($mt, $fz, $fc, $dotSt: null, $dotCol: null) {
+  li {
+    position: relative;
+    padding-left: 13px;
+    font-size: $fz;
+    color: #111;
+    text-align: left;
+    line-height: 1.2;
+    &:not(:first-child) {
+      margin-top: $mt;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 4px;
+      display: block;
+      width: 3px;
+      height: 3px;
+      background: #111;
+      border-radius: 50%;
+    }
+  }
+}
