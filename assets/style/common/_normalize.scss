@@ -172,13 +172,13 @@ span {
 
 @font-face {
   font-family: "Moebius";
-  src: url("../../assets/font/MoebiusRegular.woff2") format("woff2"), url("../../assets/font/MoebiusRegular.woff") format("woff");
+  src: url("../font/MoebiusRegular.woff2") format("woff2"), url("../font/MoebiusRegular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Moebius";
   font-weight: 700;
-  src: url("../../assets/font/MoebiusBold.woff2") format("woff2"), url("../../assets/font/MoebiusBold.woff") format("woff");
+  src: url("../font/MoebiusBold.woff2") format("woff2"), url("../font/MoebiusBold.woff") format("woff");
 }
 
 html {

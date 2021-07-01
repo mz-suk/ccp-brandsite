@@ -10,7 +10,7 @@
     width: 8rem;
     height: 2.5rem;
     margin: 3rem 0 0 3rem;
-    background: url(../../assets/img/mo-logo.png) 0 0 / 100% auto no-repeat;
+    background: url(../img/mo-logo.png) 0 0 / 100% auto no-repeat;
     @include blind();
 
     &.active {
@@ -81,7 +81,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      background: url(../../assets/img/mo-bg-image.jpg) 50% no-repeat;
+      background: url(../img/mo-bg-image.jpg) 50% no-repeat;
       background-size: cover;
       opacity: 0;
       transform: scale(1.3);
@@ -89,10 +89,10 @@
     }
 
     .android {
-      background-image: url(../../assets/img/icon-android2.png);
+      background-image: url(../img/icon-android2.png);
     }
     .ios {
-      background-image: url(../../assets/img/icon-ios2.png);
+      background-image: url(../img/icon-ios2.png);
     }
 
     .inner {

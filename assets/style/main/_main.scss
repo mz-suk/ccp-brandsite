@@ -9,7 +9,7 @@
     width: 19rem;
     height: 5.3rem;
     margin: 7rem 0 0 14rem;
-    background: url(../../assets/img/logo.png) 0 0 / 100% auto no-repeat;
+    background: url(../img/logo.png) 0 0 / 100% auto no-repeat;
     @include blind();
 
     &.active {
@@ -84,7 +84,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: url(../../assets/img/bg-image.jpg) 50% no-repeat;
+        background: url(../img/bg-image.jpg) 50% no-repeat;
         background-size: cover;
         opacity: 0;
         transform: scale(1.2);
@@ -105,10 +105,10 @@
       }
 
       .android {
-        background-image: url(../../assets/img/icon-android2.png);
+        background-image: url(../img/icon-android2.png);
       }
       .ios {
-        background-image: url(../../assets/img/icon-ios2.png);
+        background-image: url(../img/icon-ios2.png);
       }
     }
 
@@ -235,13 +235,13 @@
       .swiper-button-prev {
         width: 3.5rem;
         height: 3.5rem;
-        background: url(../../assets/img/icon-next.svg) 0 0 / 100% auto no-repeat;
+        background: url(../img/icon-next.svg) 0 0 / 100% auto no-repeat;
         transition: background 0.3s ease;
         &:after {
           display: none;
         }
         &.swiper-button-disabled {
-          background-image: url(../../assets/img/icon-next-off.svg);
+          background-image: url(../img/icon-next-off.svg);
           opacity: 1;
         }
       }
@@ -362,11 +362,11 @@
     width: 22rem;
     height: 8rem;
     margin-right: 3rem;
-    background: url(../../assets/img/icon-android1.png) 0 0 / auto 100% no-repeat;
+    background: url(../img/icon-android1.png) 0 0 / auto 100% no-repeat;
     @include blind();
 
     &.ios {
-      background-image: url(../../assets/img/icon-ios1.png);
+      background-image: url(../img/icon-ios1.png);
     }
   }
 }
