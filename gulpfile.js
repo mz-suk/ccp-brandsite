@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
+const imagemin = require("gulp-imagemin");
 const browsersync = require("browser-sync").create();
 const del = require("del");
 const replace = require("gulp-replace");
@@ -39,6 +40,28 @@ function watchFiles() {
   gulp.watch([assets + "style/**/*", "./html/**/*"], browserReload);
 }
 
+function imageTask(task) {
+  var task = task !== null ? task : "";
+  return gulp
+    .src(assets + "img/" + task + "**/*", { since: gulp.lastRun(imageTask) })
+    .pipe(
+      imagemin([
+        // imagemin.gifsicle({interlaced: true}),
+        imagemin.mozjpeg({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        // imagemin.svgo({
+        //	 plugins: [
+        //		 {
+        //			 removeViewBox: false,
+        //			 collapseGroups: true
+        //		 }
+        //	 ]
+        // })
+      ])
+    )
+    .pipe(gulp.dest(static + "img/" + task));
+}
+
 function buildMoveImg() {
   return gulp.src(assets + "img/**/*").pipe(gulp.dest(static + "img/"));
 }
@@ -57,5 +80,8 @@ function buildConvertCss() {
 exports.clear = gulp.series(() => del(static));
 exports.default = gulp.parallel(watchFiles, browser);
 exports.css = gulp.series(() => cssTask("*", true));
-exports.build = gulp.series(() => del(static), gulp.parallel(buildConvertCss));
+exports.build = gulp.series(
+  () => del(static),
+  gulp.parallel(() => imageTask(null))
+);
 // exports.build = gulp.series(() => del(static), gulp.parallel(buildMoveImg, buildMoveFont, buildConvertCss));
