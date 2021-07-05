@@ -1,9 +1,13 @@
 // IE header
 .ie-header {
-  position:fixed; top:70px; left:140px;
+  position: absolute;
+  top: 70px;
+  left: 140px;
+  z-index: 2;
 
   .logo {
-    width: 190px; height: 53px;
+    width: 190px;
+    height: 53px;
     background: url(../img/logo.png) 0 0/100% auto no-repeat;
     font: 0/0 a;
   }
@@ -11,38 +15,50 @@
 
 // IE container
 .ie-container {
-  color:$fc1; line-height:1.2;
+  color: $fc1;
+  line-height: 1.2;
 
   // 공통
   .list-dot {
     li {
-      position: relative; padding-left: 14px; margin-top:20px;
-      font-size: 20px; line-height: 1.3;
+      position: relative;
+      padding-left: 14px;
+      margin-top: 20px;
+      font-size: 20px;
+      line-height: 1.3;
 
       &:first-child {
-        margin-top:0;
+        margin-top: 0;
       }
       &:after {
         content: "";
-        position: absolute; top:50%; left: 0; width: 4px; height: 4px;
-        margin-top:-3px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        margin-top: -3px;
         border-radius: 50%;
         background: $fc1;
       }
     }
   }
   .wrap-btn {
-    position:absolute; bottom:0; left:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   .btn-download {
-    width: 220px; height: 80px; margin-left:30px;
+    width: 220px;
+    height: 80px;
+    margin-left: 30px;
     font: 0/0 a;
-    background-position:0 0;
-    background-size:100% auto;
-    background-repeat:no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 
     &:first-child {
-      margin-left:0;
+      margin-left: 0;
     }
     &.ios {
       background-image: url(../img/icon-ios1.png);
@@ -52,48 +68,63 @@
     }
   }
   .wrap-img {
-    position:absolute;
+    position: absolute;
 
     img {
-      width:100%;
+      width: 100%;
     }
   }
   .wrap-img-slide {
-    position:absolute;
+    position: absolute;
   }
 
   // 레이아웃
   .warp-section {
-    position:relative;
-    height:100vh;
-    box-sizing:border-box;
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+
+    .section-logo {
+      position: absolute;
+      top: 70px;
+      left: 140px;
+      width: 190px;
+      height: 53px;
+      background: url(../img/logo2.png) 0 0/100% auto no-repeat;
+      font: 0/0 a;
+    }
   }
   .wrap-contents {
-    position:absolute; top:50%; left:50%;
-    width:100%; max-width:1080px; min-width:880px; min-height:640px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 1080px;
+    min-width: 880px;
+    min-height: 550px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 
     .title {
-      font-size:66px;
+      font-size: 66px;
     }
     .desc {
-      margin-top:20px;
-      font-size:24px;
+      margin-top: 20px;
+      font-size: 24px;
     }
     .list-dot {
-      margin-top:62px;
+      margin-top: 62px;
     }
   }
 
   // 섹션별
   .notice {
-    color:$fcF;
+    color: $fcF;
     // text-shadow: 0 30px 60px rgb(0 0 0 / 16%);
-    background: url(../img/bg-image.jpg) 0 0/auto 100% no-repeat;
+    background: url(../img/bg-image.jpg) 0 0 / auto 100% no-repeat;
 
     .title {
-      font-size:77px;
+      font-size: 77px;
     }
     .btn-download {
       &.ios {
@@ -106,78 +137,89 @@
   }
   .section1 {
     .wrap-img {
-      top:0; right:0;
-      width:490px; height:490px;
+      top: 0;
+      right: 0;
+      width: 490px;
+      height: 490px;
     }
   }
-  .section2{
-    background-color:$fcF9;
+  .section2 {
+    background-color: $fcF9;
 
     .wrap-img {
-      top:0; right:0;
-      width:460px; height:460px;
+      top: 40px;
+      right: 0;
+      width: 460px;
+      height: 460px;
     }
   }
   .section3 {
     .wrap-img {
-      top:0; right:0;
-      width:490px; height:490px;
+      top: 0;
+      right: 0;
+      width: 490px;
+      height: 490px;
     }
     .wrap-tab {
-      margin-top:50px;
-      font-size:24px;
+      margin-top: 50px;
+      font-size: 24px;
 
       .item {
-        margin-left:26px;
+        margin-left: 26px;
 
         &:first-child {
-          margin-left:0;
+          margin-left: 0;
         }
         &.active {
           border-bottom: 2px solid $pc3;
-          color:$pc3;
+          color: $pc3;
         }
       }
     }
     .wrap-tab-contents {
-      font-size:20px;
-      margin-top:36px;
+      font-size: 20px;
+      margin-top: 36px;
 
       .item {
-        display:none;
+        display: none;
 
         &.active {
-          display:block;
+          display: block;
         }
       }
     }
     .wrap-img-slide {
-      position:absolute; right:-70px; top:70px;
+      position: absolute;
+      right: -70px;
+      top: 70px;
 
       .slide-btn {
-        position:absolute; top:50%; margin-top:-18px;
-        width:35px; height:35px;
-        font:0/0 a;
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+        width: 35px;
+        height: 35px;
+        font: 0/0 a;
         background: url(../img/icon-next-off.svg) 0 0/100% auto no-repeat;
 
         &.active {
           background-image: url(../img/icon-next.svg);
         }
         &.prev {
-          left:0;
-          transform:rotate(180deg);
-          -ms-transform:rotate(180deg);
+          left: 0;
+          transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
         }
         &.next {
-          right:0;
+          right: 0;
         }
       }
       .item {
-        display:none;
-        width:547px;
+        display: none;
+        width: 547px;
 
         &.active {
-          display:block;
+          display: block;
         }
       }
       // url(../img/icon-next-off.svg)
@@ -186,101 +228,107 @@
   }
 
   .footer {
-    background-color:$fcF9;
+    background-color: $fcF9;
 
     .wrap-contents {
-      min-height:auto;
-      overflow:hidden;
+      min-height: auto;
+      overflow: hidden;
     }
     .footer-section {
-      float:left;
-      padding:0 10px 0 50px;
-      border-left:1px dotted $fcC5;
+      float: left;
+      padding: 0 10px 0 50px;
+      border-left: 1px dotted $fcC5;
 
       &:first-child {
-        padding-left:0;
-        border:0;
+        padding-left: 0;
+        border: 0;
       }
     }
     .desc {
-      margin:0; padding:10px 0 0 40px;
-      font-size:30px;
+      margin: 0;
+      padding: 10px 0 0 40px;
+      font-size: 30px;
     }
     .wrap-partner {
-      overflow:hidden;
-      margin-top:30px;
+      overflow: hidden;
+      margin-top: 30px;
 
       .item {
-        float:left;
-        width:154px; padding:5px 0;
-        text-align:center;
-        border-left:1px dotted $fcC5;
+        float: left;
+        width: 154px;
+        padding: 5px 0;
+        text-align: center;
+        border-left: 1px dotted $fcC5;
 
         &:first-child {
-          border:0;
+          border: 0;
         }
       }
       .item-logo {
-        height:59px;
+        height: 59px;
       }
       .item-desc {
-        display:block;
-        margin-top:13px;
-        font-size:12px;
+        display: block;
+        margin-top: 13px;
+        font-size: 12px;
       }
       .item-text {
-        display:block;
-        margin-top:9px;
-        font-size:9px; font-weight:700;
+        display: block;
+        margin-top: 9px;
+        font-size: 9px;
+        font-weight: 700;
       }
     }
     .footer-logo {
-      margin-top:10px;
+      margin-top: 10px;
     }
     .copyright {
-      display:block;
-      margin-top:17px;
-      font-size:10px; line-height:1.5;
+      display: block;
+      margin-top: 17px;
+      font-size: 10px;
+      line-height: 1.5;
     }
     .wrap-links {
-      margin-top:50px;
-      font-size:14px;
-      line-height:1.5;
+      margin-top: 50px;
+      font-size: 14px;
+      line-height: 1.5;
 
       .item {
-        position:relative;
-        padding-left:22px;
+        position: relative;
+        padding-left: 22px;
 
         &:after {
           content: "";
-          position: absolute; top: 50%; left: 11px;
-          width: 1px; height: 10px;
+          position: absolute;
+          top: 50%;
+          left: 11px;
+          width: 1px;
+          height: 10px;
           margin-top: -5px;
           background: #111;
         }
         &:first-child {
-          padding-left:0;
+          padding-left: 0;
 
           &:after {
-            display:none;
+            display: none;
           }
         }
       }
     }
     .address {
-      margin-top:27px;
-      font-size:12px;
-      line-height:1.5;
+      margin-top: 27px;
+      font-size: 12px;
+      line-height: 1.5;
     }
   }
 }
 
-
 [data-tab-index="0"] {
   [data-key] {
-    display:none;
+    display: none;
   }
   [data-key="item0"] {
-    display:block !important;
+    display: block !important;
   }
 }

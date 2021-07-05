@@ -38,13 +38,14 @@
             <h2 class="title">혜택이 넘치는<br />내 차 관리 서비스</h2>
             <p class="desc">Must have item<br />muffin</p>
             <div class="wrap-btn">
-              <button type="button" class="btn-download android">Google Play</button>
-              <button type="button" class="btn-download ios">App Store</button>
+              <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
+              <button type="button" class="btn-download ios" onclick="goStore('ios')">App Store</button>
             </div>
           </div>
         </div>
 
         <div class="warp-section section1">
+          <div class="section-logo">muffin</div>
           <div class="wrap-contents">
             <h2 class="title"><em class="point1">혜택</em>이 내린다.</h2>
             <p class="desc">회원 가입만으로도 누릴 수 있는 혜택을 즐겨보세요</p>
@@ -53,29 +54,31 @@
               <li>주유/충전 이용 시 <em class="point1">OK 캐시백 적립!</em></li>
             </ul>
             <div class="wrap-btn">
-              <button type="button" class="btn-download android">Google Play</button>
-              <button type="button" class="btn-download ios">App Store</button>
+              <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
+              <button type="button" class="btn-download ios" onclick="goStore('ios')">App Store</button>
             </div>
             <div class="wrap-img"><img src="assets/img/icon-coupon.gif" alt="" /></div>
           </div>
         </div>
 
         <div class="warp-section section2">
+          <div class="section-logo">muffin</div>
           <div class="wrap-contents">
             <h2 class="title">믿을 수 있는 SK 주유소/충전소에서,<br /><em class="point2">원터치로 예약 하세요.</em></h2>
-            <p class="desc">회원 가입만으로도 누릴 수 있는 혜택을 즐겨보세요</p>
+            <p class="desc">신용카드 낼 필요 없이 한 번의 터치로 예약 끝!</p>
             <ul class="list-dot">
               <li>평소 이용하는 주유/LPG 패턴을 미리 등록하고<br />원터치로 예약하세요.</li>
             </ul>
             <div class="wrap-btn">
-              <button type="button" class="btn-download android">Google Play</button>
-              <button type="button" class="btn-download ios">App Store</button>
+              <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
+              <button type="button" class="btn-download ios" onclick="goStore('ios')">App Store</button>
             </div>
             <div class="wrap-img"><img src="assets/img/icon-oil.gif" alt="" /></div>
           </div>
         </div>
 
         <div class="warp-section section3">
+          <div class="section-logo">muffin</div>
           <div class="wrap-contents">
             <h2 class="title"><em class="point1">프리미엄 세차 서비스</em>로<br />하차감 UP!</h2>
             <div class="wrap-tab">
@@ -87,8 +90,8 @@
               <p class="item" id="tab1">주무시는 동안 아파트로 찾아가는 방문세차 서비스<br />정기결제로 내 차량을 꾸준하게 관리해보세요.</p>
             </div>
             <div class="wrap-btn">
-              <button type="button" class="btn-download android">Google Play</button>
-              <button type="button" class="btn-download ios">App Store</button>
+              <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
+              <button type="button" class="btn-download ios" onclick="goStore('ios')">App Store</button>
             </div>
             <div class="wrap-img-slide">
               <button class="slide-btn prev" type="button">이전</button>
@@ -106,12 +109,12 @@
             <div class="footer-section">
               <div class="desc">머핀과 함께하는<br />파트너사</div>
               <div class="wrap-partner">
-                <a href="javascript:;" class="item">
+                <a href="https://www.sechawang.com/" target="_blank" class="item">
                   <img class="item-logo" src="assets/img/icon-partner3.png" alt="세차왕" />
                   <span class="item-desc">세차왕<br />전문가의 방문세차.</span>
                   <span class="item-text">Mobility care service</span>
                 </a>
-                <a href="javascript:;" class="item">
+                <a href="http://igotcha.co.kr/" target="_blank" class="item">
                   <img class="item-logo" src="assets/img/icon-partner4.png" alt="세차왕" />
                   <span class="item-desc">갓차<br />당신을 위한 세차.</span>
                   <span class="item-text">gotcha members</span>
@@ -124,9 +127,9 @@
                 <small class="copyright">(C) SK ENERGY CO.,LTD. ALL RIGHTS RESERVED.</small>
               </div>
               <div class="wrap-links">
-                <a href="javascript:;" class="item">서비스 이용약관</a>
-                <a href="javascript:;" class="item">개인정보 처리방침</a>
-                <a href="javascript:;" class="item">회사소개</a>
+                <a href="./html/terms_01.html" target="_blank" class="item">서비스 이용약관</a>
+                <a href="./html/terms_02.html" target="_blank" class="item">개인정보 처리방침</a>
+                <a href="http://www.skenergy.com/company/overview.asp" target="_blank" class="item">회사소개</a>
               </div>
               <address class="address">
                 <p>ARS 고객센터 1588-0051/1599-0051</p>
@@ -229,7 +232,7 @@
           fnActive(thisIdx);
         }
         function fnBtnClick(classList) {
-          var isPrev = classList.value.indexOf("prev") > 0;
+          var isPrev = classList.contains("prev");
           if (isPrev && currentIdx > 0) currentIdx--;
           if (!isPrev && currentIdx < itemTab.length - 1) currentIdx++;
 
@@ -267,6 +270,12 @@
       })();
 
       fnTab.init();
+
+      function goStore(platform) {
+        var store = platform === "ios" ? "https://itunes.apple.com/app/id1507316276" : "https://play.google.com/store/apps/details?id=com.ske.phone.epay";
+        // location.href = store;
+        window.open(store, "", "");
+      }
 
       function popClose() {
         document.querySelector(".wrapper-layer").style.cssText = "display:none";
