@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 11]><html lang="ko" class="ie-bro"><![endif]-->
+<!--[if lt IE 11]><html lang="ko" id="ieBro"><![endif]-->
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -19,13 +19,8 @@
     <title>혜택이 넘치는 내 차 관리 서비스, 머핀</title>
     <script>
       (function () {
-        if (/Mobi/i.test(window.navigator.userAgent)) {
-          location.replace("mo_index.html");
-        }
-        if (document.documentElement.classList.contains("ie-bro")) {
-          alert("ie-bro");
-          location.replace("ie_index.html");
-        }
+        if (/Mobi/i.test(window.navigator.userAgent)) location.replace("mo_index.html");
+        if (!!document.getElementById("ieBro")) location.replace("ie_index.html");
       })();
     </script>
   </head>
