@@ -12,7 +12,11 @@
     font: 0/0 a;
   }
 }
-
+html {
+  overflow-x: hidden;
+  overflow-y: visible;
+  width: 100%;
+}
 // IE container
 .ie-container {
   color: $fc1;
