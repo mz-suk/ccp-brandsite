@@ -27,7 +27,6 @@
       <!-- header -->
       <header class="ie-header">
         <h1 class="logo">muffin</h1>
-        <!-- [D] 로고 검은색 :: .active 추가 -->
       </header>
       <!-- //header -->
 
@@ -50,8 +49,9 @@
             <h2 class="title"><em class="point1">혜택</em>이 내린다.</h2>
             <p class="desc">회원 가입만으로도 누릴 수 있는 혜택을 즐겨보세요</p>
             <ul class="list-dot">
-              <li>세차 예약 시 <em class="point1">쿠폰/OK 캐시백 사용!</em></li>
-              <li>주유/충전 이용 시 <em class="point1">OK 캐시백 적립!</em></li>
+              <li>주유 이용 시 <em class="point1">머핀 포인트 1.8~2원/ℓ 적립</em></li>
+              <li>주유ㆍ세차 상품 구매 시 <em class="point1">포인트 사용</em> (1원 단위)</li>
+              <li>충전 이용 시 <em class="point1">OK 캐시백 0.5% 적립</em></li>
             </ul>
             <div class="wrap-btn">
               <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
@@ -84,10 +84,12 @@
             <div class="wrap-tab">
               <a href="#tab0" class="item active">출장세차</a>
               <a href="#tab1" class="item">새벽세차</a>
+              <a href="#tab2" class="item">손세차</a>
             </div>
             <div class="wrap-tab-contents">
               <p class="item active" id="tab0">주차만 해두시면 세차는 전문세차 매니저가<br />책임집니다.</p>
               <p class="item" id="tab1">주무시는 동안 아파트로 찾아가는 방문세차 서비스<br />정기결제로 내 차량을 꾸준하게 관리해보세요.</p>
+              <p class="item" id="tab2">엄격한 품질 테스트를 거친<br />프리미엄 디테일링 서비스를 경험해보세요.</p>
             </div>
             <div class="wrap-btn">
               <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
@@ -98,6 +100,7 @@
               <div class="wrap-item">
                 <div class="item active"><img src="assets/img/icon-cont1.svg" alt="" /></div>
                 <div class="item"><img src="assets/img/icon-cont2.svg" alt="" /></div>
+                <div class="item"><img src="assets/img/icon-cont3.svg" alt="" /></div>
               </div>
               <button class="slide-btn next active" type="button">다음</button>
             </div>
@@ -109,6 +112,16 @@
             <div class="footer-section">
               <div class="desc">머핀과 함께하는<br />파트너사</div>
               <div class="wrap-partner">
+                <a href="https://rupes-store.com/" target="_blank" class="item">
+                  <img class="item-logo" src="assets/img/icon-partner1.png" alt="루페스" />
+                  <span class="item-desc">루페스에서<br />새차보다 더 세차처럼</span>
+                  <span class="item-text">Rupes Korea</span>
+                </a>
+                <a href="http://sonaxkorea.com/" target="_blank" class="item">
+                  <img class="item-logo" src="assets/img/icon-partner2.png" alt="소낙스" />
+                  <span class="item-desc">소낙스는<br />자연과 함께 존재합니다.</span>
+                  <span class="item-text">Sonax service</span>
+                </a>
                 <a href="https://www.sechawang.com/" target="_blank" class="item">
                   <img class="item-logo" src="assets/img/icon-partner3.png" alt="세차왕" />
                   <span class="item-desc">세차왕<br />전문가의 방문세차.</span>
@@ -143,7 +156,7 @@
       <!-- //container -->
     </div>
 
-    <div class="wrapper-layer">
+    <!-- <div class="wrapper-layer">
       <div class="wrap-layer" style="width: 720px">
         <div class="head">
           <h1 class="title">엔크린 멤버십 서비스 정책 변경 안내</h1>
@@ -193,7 +206,7 @@
         <a href="javascript:popClose();" class="btn-close"><img src="assets/img/btn_close.png" alt="SK energy" /></a>
       </div>
       <div class="mask"></div>
-    </div>
+    </div> -->
 
     <script>
       var fnTab = (function () {
@@ -278,9 +291,9 @@
         window.open(store, "", "");
       }
 
-      function popClose() {
-        document.querySelector(".wrapper-layer").style.cssText = "display:none";
-      }
+      // function popClose() {
+      //   document.querySelector(".wrapper-layer").style.cssText = "display:none";
+      // }
     </script>
   </body>
 </html>

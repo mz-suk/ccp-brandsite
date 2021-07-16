@@ -36,7 +36,6 @@
       <!-- header -->
       <header class="mo-header">
         <h1 class="logo" id="jsLogo">muffin</h1>
-        <!-- [D] 로고 검은색 :: .active 추가 -->
       </header>
       <!-- //header -->
 
@@ -64,10 +63,9 @@
               <div class="cont2" data-swiper-parallax-y="100%">
                 <div class="inner">
                   <p class="tit"><span class="point1">혜택</span>이 내린다.</p>
-                  <p class="txt">세차 예약 시 <span class="point1">쿠폰/OK 캐시백 사용!</span></p>
-                  <p class="txt">주유/충전 이용 시 <span class="point1">OK 캐시백 적립!</span></p>
-                  <!-- <p class="txt">주유하면 ℓ당 <span class="point1">머핀포인트 2원 적립!</span></p>
-                  <p class="txt">가입만 해도 세차 쿠폰 증정<br />세차 서비스 <span class="point1">이용 금액 최대 5% 적립!</span></p> -->
+                  <p class="txt">주유 이용 시 <span class="point1">머핀 포인트 1.8~2원/ℓ 적립</span></p>
+                  <p class="txt">주유ㆍ세차 상품 구매 시 <span class="point1">포인트 사용</span> (1원 단위)</p>
+                  <p class="txt">충전 이용 시 <span class="point1">OK 캐시백 0.5% 적립</span></p>
                   <div class="thumb img1"><img src="assets/img/icon-coupon.png" alt="" /></div>
                   <div class="thumb img2"><img src="assets/img/icon-coupon.gif" alt="" /></div>
                   <div class="wrap-btn">
@@ -101,7 +99,7 @@
                     <ul class="tab-menu">
                       <li class="active"><a href="#none">출장세차</a></li>
                       <li><a href="#none">새벽세차</a></li>
-                      <!-- <li><a href="#none">손세차</a></li> -->
+                      <li><a href="#none">손세차</a></li>
                     </ul>
                     <div class="swiper-container tab-slide">
                       <ul class="swiper-wrapper">
@@ -113,10 +111,10 @@
                           <div class="img"><img src="assets/img/icon-cont2.svg" alt="새벽세차" /></div>
                           <p>주무시는 동안 아파트로 찾아가는 방문세차 서비스<br />정기결제로 내 차량을 꾸준하게 관리해보세요.</p>
                         </li>
-                        <!-- <li class="swiper-slide">
+                        <li class="swiper-slide">
                           <div class="img"><img src="assets/img/icon-cont3.svg" alt="손세차" /></div>
                           <p>엄격한 품질 테스트를 거친<br />프리미엄 디테일링 서비스를 경험해보세요.</p>
-                        </li> -->
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -134,7 +132,7 @@
                   <div class="info-area">
                     <p class="tit">머핀과 함께하는<br />파트너사</p>
                     <ul class="list-partner">
-                      <!-- <li>
+                      <li>
                         <a href="https://rupes-store.com/" target="_blank">
                           <span class="logo"><img src="assets/img/icon-partner1.png" alt="루페스" /></span>
                           <p class="desc">루페스에서<br />새차보다 더 세차처럼</p>
@@ -147,7 +145,7 @@
                           <p class="desc">소낙스는<br />자연과 함께 존재합니다.</p>
                           <p class="txt">Sonax service</p>
                         </a>
-                      </li> -->
+                      </li>
                       <li>
                         <a href="https://www.sechawang.com/" target="_blank">
                           <span class="logo"><img src="assets/img/icon-partner3.png" alt="세차왕" /></span>
@@ -187,7 +185,7 @@
       <!-- //container -->
     </div>
 
-    <div class="wrapper-layer">
+    <!-- <div class="wrapper-layer">
       <div class="wrap-mobile-layer">
         <div class="inner-layer">
           <div class="head">
@@ -225,7 +223,7 @@
         <a href="javascript:popClose();" class="btn-close">닫기</a>
       </div>
       <div class="mask"></div>
-    </div>
+    </div> -->
 
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script>
@@ -265,7 +263,7 @@
           bulletActiveClass: "active",
           clickable: true,
           renderBullet: function (index, className) {
-            var desc = ["출장세차", "새벽세차"];
+            var desc = ["출장세차", "새벽세차", "손세차"];
             return '<li class="' + className + '"><a href="javascript:;">' + desc[index] + "</a></li>";
           },
         },
@@ -279,9 +277,9 @@
         window.open(store, "", "");
       }
 
-      function popClose() {
-        document.querySelector(".wrapper-layer").style.cssText = "display:none";
-      }
+      // function popClose() {
+      //   document.querySelector(".wrapper-layer").style.cssText = "display:none";
+      // }
     </script>
   </body>
 </html>
