@@ -33,9 +33,11 @@
         height: 100%;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
       }
       .wrap-error {
         position: relative;
+        max-width: 50rem;
         padding: 12rem 2rem 9rem;
         text-align: center;
       }
@@ -75,6 +77,12 @@
         color: #fff;
         font-size: 1.5rem;
       }
+      .box-svc-time {
+        margin: 2rem 1rem;
+        padding: 1rem;
+        color: #111;
+        background-color: #e1e1e1;
+      }
     </style>
   </head>
   <body>
@@ -86,6 +94,9 @@
           새로고침 또는 잠시 후 다시 접속해주시기 바랍니다.<br />
           이용에 불편을 드려 죄송합니다.
         </p>
+        <div class="box-svc-time">
+          <p>2021/11/15 12:00 ~ 2021/11/16 00:00</p>
+        </div>
         <p class="tel">고객행복센터 <a href="tel:1599-0051">1599-0051</a></p>
         <div class="wrap-button">
           <a href="javascript:history.back()" class="button type1">새로고침</a>

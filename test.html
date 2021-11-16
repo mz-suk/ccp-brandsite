@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head> </head>
+  <body>
+    <div id="chart">
+      <!-- //container -->
+    </div>
+
+    <!-- <div class="wrapper-layer">
+      <div class="wrap-layer" style="width: 720px">
+        <div class="head">
+          <h1 class="title">엔크린 멤버십 서비스 정책 변경 안내</h1>
+        </div>
+        <div class="body">
+          <div class="desc">항상 SK주유소를 이용해 주시는 고객 여러분께 감사의 말씀 드립니다. <br />엔크린 멤버십 서비스가 아래와 같이 변경되어 안내 드립니다.</div>
+          <table class="table">
+            <colgroup>
+              <col style="width: 20%" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scoped="row">변경내용</th>
+                <td>
+                  <div class="wrap-info-list">
+                    <p class="title">엔크린 멤버십 명칭 및 혜택 변경</p>
+                    <ul class="text-list">
+                      <li>[기존] 엔크린 멤버십, OK캐쉬백 포인트, 0.1%적립</li>
+                      <li class="point">[변경] 머핀 멤버십, 머핀 포인트, 리터당 2원 적립<br />※ 2021년 7월 26(월)부터 변경</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="wrap-info-list">
+            <p class="title">주요 안내 사항</p>
+            <ul class="text-list">
+              <li>기존에 사용하시던 엔크린 보너스 카드는 그대로 이용 할 수 있습니다. ’21년 7월 26일부터 기존 카드로 머핀 포인트 적립과 사용이 모두 가능합니다.</li>
+              <li>신용/체크카드에 엔크린 보너스 카드 혜택이 제공되고 있는 경우에도 ’21년 7월 26일부터 기존 카드로 머핀 포인트 적립 및 사용이 모두 가능합니다.</li>
+              <li>기존 사용하시던 OK캐쉬백 포인트는 그대로 SK주유소에서 주유 결제 시 사용할 수 있습니다.</li>
+              <li>SK충전소(LPG)는 기존과 동일하게 OK캐쉬백 포인트의 적립및 사용이 가능합니다.</li>
+            </ul>
+            <p>* 추후 변경 시 별도 안내 예정</p>
+          </div>
+        </div>
+        <div class="foot">
+          <div class="logo">
+            <img src="assets/img/logo-ske.png" alt="SK energy" />
+          </div>
+          <div class="inner">
+            <p>앞으로 더 좋은 서비스를 위해 노력하겠습니다.<br />엔크린 멤버십 포인트 및 적립율 변경 관련 문의사항은 아래 고객센터로 문의 주시기 바랍니다.</p>
+            <div class="wrap-tel">고객행복센터 <i class="number">1588-0051 / 1599-0051 </i></div>
+          </div>
+        </div>
+        <a href="javascript:popClose();" class="btn-close"><img src="assets/img/btn_close.png" alt="SK energy" /></a>
+      </div>
+      <div class="mask"></div>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+      var options = {
+        series: [75],
+        chart: {
+          height: 350,
+          type: "radialBar",
+          toolbar: {
+            show: false,
+          },
+        },
+        plotOptions: {
+          radialBar: {
+            startAngle: -135,
+            endAngle: 225,
+            hollow: {
+              margin: 0,
+              size: "70%",
+              background: "#fff",
+              image: undefined,
+              imageOffsetX: 0,
+              imageOffsetY: 0,
+              position: "front",
+              dropShadow: {
+                enabled: true,
+                top: 3,
+                left: 0,
+                blur: 4,
+                opacity: 0.24,
+              },
+            },
+            track: {
+              background: "#fff",
+              strokeWidth: "67%",
+              margin: 0, // margin is in pixels
+              dropShadow: {
+                enabled: true,
+                top: -3,
+                left: 0,
+                blur: 4,
+                opacity: 0.35,
+              },
+            },
+
+            dataLabels: {
+              show: true,
+              name: {
+                offsetY: -10,
+                show: true,
+                color: "#888",
+                fontSize: "17px",
+              },
+              value: {
+                formatter: function (val) {
+                  return parseInt(val);
+                },
+                color: "#111",
+                fontSize: "36px",
+                show: true,
+              },
+            },
+          },
+        },
+        fill: {
+          type: "gradient",
+          gradient: {
+            shade: "dark",
+            type: "horizontal",
+            shadeIntensity: 0.1,
+            // gradientToColors: ["#0F0", "#0F0", "#0F0", "#F00", "#00F"],
+            inverseColors: true,
+            opacityFrom: 1,
+            opacityTo: 1,
+            stops: [0, 100],
+            colorStops: [
+              {
+                offset: 0,
+                color: "#EB656F",
+                opacity: 1,
+              },
+              {
+                offset: 20,
+                color: "#FAD375",
+                opacity: 1,
+              },
+              {
+                offset: 60,
+                color: "#61DBC3",
+                opacity: 1,
+              },
+              {
+                offset: 100,
+                color: "#95DA74",
+                opacity: 1,
+              },
+            ],
+          },
+        },
+        stroke: {
+          lineCap: "round",
+        },
+        labels: ["Percent"],
+      };
+
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
+    </script>
+  </body>
+</html>
